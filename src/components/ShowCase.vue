@@ -3,7 +3,7 @@
     <h1 class="text-2xl text-gray-400" >
       SUggested...
     </h1>
-    <h1 class="text-2xl text-green-500" >
+    <h1 class="text-2xl text-indigo-600" >
       MOvies 
     </h1>
    </div>
@@ -58,16 +58,24 @@ const hasSearched = ref(false);   // control what shows
 
 const fetchRandomMovies = async () => {
   try {
-    const res = await fetch(
-      `https://api.themoviedb.org/3/movie/popular?api_key=2c2d1c5fa04533775bfee1e0491429f2&page=${Math.floor(Math.random() * 10) + 1}`
-    );
-    const data = await res.json();
-    const shuffled = data.results.sort(() => 0.19 - Math.random());
-    movieList.value = shuffled.slice(0, 19); // 19 movies
+    const pages = [1, 2, 3]; // Or pick randomly or sequentially
+    const allResults = [];
+
+    for (const page of pages) {
+      const res = await fetch(
+        `https://api.themoviedb.org/3/movie/popular?api_key=2c2d1c5fa04533775bfee1e0491429f2&page=${page}`
+      );
+      const data = await res.json();
+      allResults.push(...data.results);
+    }
+
+    const shuffled = allResults.sort(() => 0.5 - Math.random());
+    movieList.value = shuffled.slice(0, 60); // Up to 60 movies from 3 pages
   } catch (error) {
     console.error("Error fetching movies:", error);
   }
 };
+
 
 const getMovie = async (movieId) => {
   const res = await fetch(
