@@ -17,7 +17,7 @@ A responsive web application that showcases estate properties efficiently with a
 
 
 ## 📸 Screenshot
-![estate](./images/estate.png)
+![estate](./src/assets/images/estate.png)
 
 
 ## 🤝 Contributing
