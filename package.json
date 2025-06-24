@@ -1,5 +1,5 @@
 {
-  "name": "pokemon-app",
+  "name": "pfx-pj",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@popperjs/core": "^2.11.8",
+    "animate.css": "^4.1.1",
     "aos": "^2.3.4",
     "autoprefixer": "^10",
     "bootstrap": "^5.3.3",

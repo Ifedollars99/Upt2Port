@@ -1,218 +1,154 @@
 <template>
-  <div class="flex h-screen bg-gray-50">
-    <!-- Sidebar -->
-    <aside :class="[
-      'bg-white py-7 px-2 absolute inset-y-0 left-0 transform transition-all duration-300 ease-in-out z-50 flex flex-col',
-      sidebarOpen ? 'translate-x-0' : '-translate-x-full',
-      expanded ? 'w-64' : 'w-20',
-      'md:relative md:translate-x-0',
-    ]">
-      <!-- Close button (mobile only) -->
-      <button v-if="sidebarOpen && !isDesktop" @click="sidebarOpen = false"
-        class="self-end mb-4 mr-2 text-3xl font-bold md:hidden focus:outline-none" aria-label="Close sidebar">
-        ×
-      </button>
+  <nav class="bg-neutral-950 shadow-md fixed w-full z-10 p-2">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-16">
+        <!-- Logo -->
+        <div class="flex items-center">
+          <img src="https://i.pinimg.com/736x/8b/29/a3/8b29a3e4b573bb5c95300a2738503dbc.jpg" class="w-12 h-12"
+            alt="My logo">
+        </div>
 
-      <!-- Sidebar content -->
-      <nav class="flex-1">
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex space-x-4 items-center">
+          <a href="#" class="text-white hover:text-blue-600 no-underline">Home</a>
+          <a href="#" class="text-white hover:text-blue-600 no-underline">Services</a>
+          <div class="relative group">
+            <!-- ACtivities -->
+            <div @click="toggleActivities" class="flex items-center gap-1 cursor-pointer">
+              <span class="text-white hover:text-blue-600">Activities</span>
+              <i class="bi bi-arrow-down-short text-white transition-transform duration-300"
+                :class="{ 'rotate-180': isActivitiesOpen }"></i>
+            </div>
 
-        <div class="flex flex-row gap-4">
-          <button v-if="isDesktop" @click="expanded = !expanded" class=" flex justify-start text-2xl"
-            :aria-label="expanded ? 'Collapse sidebar' : 'Expand sidebar'">
-            <span v-if="expanded">☰</span>
-            <span v-else>☰</span>
-          </button>
-          <div class="flex flex-row gap-2">
-            <img class="w-10 h-10" src="https://cdn.worldvectorlogo.com/logos/youtube-icon-5.svg" alt="Youtube logo">
-            <h1 icon="home" label="Home" :collapsed="!expanded" class="text-black text-2xl">Ifedollars Movies </h1>
+            <div v-if="isActivitiesOpen" class="absolute mt-3 bg-neutral-950 rounded-md shadow-lg py-2 w-40 z-20">
+              <div v-if="isActivitiesOpen" class="bg-blue-500 p-0.5 rounded-2xl"></div>
+              <a href="#" class="block px-4 py-2 text-white hover:bg-neutral-700 no-underline">Our Works</a>
+              <a href="#" class="block px-4 py-2 text-white hover:bg-neutral-700 no-underline">Advertisement</a>
+            </div>
           </div>
-        </div>
-        <!-- Your Date Display -->
-        <div class="text-center mb-6">
-          {{
-            new Date().toLocaleDateString('en-us', {
-              weekday: 'long',
-              year: 'numeric',
-              month: 'long',
-              day: 'numeric',
-            })
-          }}
-        </div>
-        <hr class="my-4" />
 
-        <!-- home -->
-        <div class="flex flex-row gap-3 hover:bg-gray-200 rounded-xl p-2 cursor-pointer" @click="reloadPage">
-          <i class="bi bi-house-door-fill text-xl"></i>
-          <h1 v-if="expanded" class="text-lg font-medium">
-            Home
-          </h1>
+          <!-- Company Profile -->
+          <div class="relative group">
+            <div @click="toggleCompany" class="flex items-center gap-1 cursor-pointer">
+              <span class="text-white hover:text-blue-600">Company Profile</span>
+              <i class="bi bi-arrow-down-short text-white transition-transform duration-300"
+                :class="{ 'rotate-180': isCompanyOPen }"></i>
+            </div>
+
+            <div v-if="isCompanyOPen" class="absolute mt-3 bg-neutral-950 rounded-md shadow-lg py-2 w-40 z-20">
+              <div v-if="isCompanyOPen" class="bg-blue-500 p-0.5 rounded-2xl"></div>
+              <a href="#" class="block px-4 py-2 text-white hover:bg-neutral-700 no-underline">Board of directors</a>
+              <a href="#" class="block px-4 py-2 text-white hover:bg-neutral-700 no-underline">Our Team</a>
+            </div>
+          </div>
+
+          <a href="#" class="text-white hover:text-blue-600 no-underline">Gallery</a>
+          <a href="#" class="text-white hover:text-blue-600 no-underline">About Us</a>
+          <a href="#" class="text-white hover:text-blue-600 no-underline">Contact Us</a>
         </div>
 
-        <!-- shorts -->
-        <div class="flex flex-row gap-3 hover:bg-gray-200 rounded-xl p-2">
-          <i class="bi bi-tiktok text-xl"></i>
-          <h1 v-if="expanded" icon="clock" label="History" class="text-lg font-normal">
-            Shorts
-          </h1>
-        </div>
-        <!-- susscriptions -->
-        <div class="flex flex-row gap-3 hover:bg-gray-200 rounded-xl p-2">
-          <i class="bi bi-fast-forward-btn text-xl"></i>
-          <h1 v-if="expanded" icon="clock" label="History" class="text-lg font-normal">
-            Subscriptions
-          </h1>
-        </div>
-        <hr class="my-4" />
-        <!-- You -->
-        <div class=" flex flex-row gap-3 hover:bg-gray-200 rounded-xl p-2">
-          <h1 class="text-lg font-bold">
-            You
-          </h1>
-          <h1 class="text-lg font-medium">
-            >
-          </h1>
-        </div>
-        <!-- history -->
-        <div class="flex flex-row gap-3 hover:bg-gray-200 rounded-xl p-2">
-          <i class="bi bi-stopwatch text-xl font-bold"></i>
-          <h1 v-if="expanded" icon="clock" label="History" class="text-lg font-normal">
-            History
-          </h1>
-        </div>
-        <div class="flex flex-row gap-3 hover:bg-gray-200 rounded-xl p-2">
-          <i class="bi bi-collection-play text-xl"></i>
-          <h1 v-if="expanded" icon="clock" label="History" class="text-lg font-normal">
-            Playlist
-          </h1>
-        </div>
-        <div class="flex flex-row gap-3 hover:bg-gray-200 rounded-xl p-2">
-          <i class="bi bi-play-btn text-xl"></i>
-          <h1 v-if="expanded" icon="clock" label="History" class="text-lg font-normal">
-            Your Videos
-          </h1>
-        </div>
-        <div class="flex flex-row gap-3 hover:bg-gray-200 rounded-xl p-2">
-          <i class="bi bi-clock text-xl"></i>
-          <h1 v-if="expanded" icon="clock" label="History" class="text-lg font-normal">
-            Watch Later
-          </h1>
-        </div>
-        <div class="flex flex-row gap-3 hover:bg-gray-200 rounded-xl p-2">
-          <i class="bi bi-hand-thumbs-up text-xl"></i>
-          <h1 v-if="expanded" icon="clock" label="History" class="text-lg font-normal">
-            Liked
-          </h1>
-        </div>
-        <SidebarItem icon="thumb-up" label="Liked Videos" :collapsed="!expanded" />
-        <SidebarItem icon="film" label="Your Videos" :collapsed="!expanded" />
-      </nav>
-
-      <!-- Desktop expand/collapse toggle -->
-
-    </aside>
-
-    <!-- Main content area -->
-    <div class="flex-1 flex flex-col">
-
-      <div class="flex flex-row gap-4">
-        <!-- Hamburger (mobile only, shows only if sidebar closed) -->
-        <button v-if="!sidebarOpen" @click="sidebarOpen = true"
-          class="text-gray-600 text-2xl focus:outline-none flex justify-start" aria-label="Open sidebar">
-          ☰
-        </button>
-        <!-- ife -->
-          <div class=" md:hidden">
-        <div class="flex flex-row gap-2 ">
-          <img class="w-10 h-10" src="https://cdn.worldvectorlogo.com/logos/youtube-icon-5.svg" alt="Youtube logo">
-          <h1 icon="home" label="Home" :collapsed="!expanded" class="text-black text-2xl">Ifedollars Movies </h1>
+        <!-- Mobile Toggle -->
+        <div class="flex items-center md:hidden">
+          <button @click="toggleMenu" class="text-yellow-700 focus:outline-none">
+            <svg v-if="!isOpen" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+            <svg v-else class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
         </div>
       </div>
     </div>
-    <!-- search -->
-    <div class="pt-20">
-      <SearchField />
+  </nav>
+  <!-- Mobile Menu -->
+  <div class="px-4 pt-20 md:px-20">
+    <div v-if="isOpen" class="bg-blue-500 px-32 py-1 rounded-2xl md:hidden  z-20 fixed left-24"></div>
+    <div v-if="isOpen"
+      class="md:hidden flex flex-col mt-1 justify-start gap-3 px-4 w-[250px] pb-4 py-2 bg-neutral-950 z-20 fixed left-24">
+      <a href="#" class=" text-yellow-500 hover:text-yellow-600 no-underline">Home</a>
+      <a href="#" class=" text-yellow-500 hover:text-yellow-600 no-underline">Services</a>
+      <a href="#" class=" text-yellow-500 hover:text-yellow-600 no-underline ">Activities</a>
+      <a href="#" class=" text-yellow-500 hover:text-yellow-600 no-underline ml-3">Our Works</a>
+      <a href="#" class=" text-yellow-500 hover:text-yellow-600 no-underline ml-3">Advertisement </a>
+      <a href="#" class=" text-yellow-500 hover:text-yellow-600 no-underline">Company profile</a>
+      <a href="#" class=" text-yellow-500 hover:text-yellow-600 no-underline ml-3">Board of directors</a>
+      <a href="#" class=" text-yellow-500 hover:text-yellow-600 no-underline ml-3">Our Team</a>
+      <a href="#" class=" text-yellow-500 hover:text-yellow-600 no-underline">Gallery</a>
+      <a href="#" class=" text-yellow-500 hover:text-yellow-600 no-underline">About Us</a>
+      <a href="#" class=" text-yellow-500 hover:text-yellow-600 no-underline">Contact Us</a>
+      <a href="#" class=" text-yellow-500 hover:text-yellow-600 no-underline">Registration Page</a>
     </div>
-    <main class="flex-1 p-4 overflow-auto">
-      <!-- Search -->
-      <!-- ShowCase -->
-      <div>
-        <ShowCase />
+  </div>
+
+ <div class="animate__animated animate__lightSpeedInLeft">
+    <div
+      class="background h-[900px] w-full bg-cover bg-center flex flex-col gap-20 items-center px-6 py-20 md:py-72 lg:py-48">
+      <h1 class="text-white font-bold text-3xl md:text-5xl lg:text-7xl ">WELCOME TO ESTATE GROUP OF COMPANIES LIMITED
+      </h1>
+      <h1 class="text-white text-lg md:text-xl lg:text-3xl font-bold">A Combination of Estate Builders Nigeria Limited,
+        Estate Waters Limited,
+        Estate Online Market Linited, and Citizens Attorneys and Associates </h1>
+
+      <div class="flex justify-center items-center">
+        <div class="border-4 border-white hover:border-none hover:bg-black px-10 py-2 rounded-2xl">
+          <a class="text-white bg-transparent font-bold text-2xl no-underline" href="#">About Us</a>
+        </div>
       </div>
-    </main>
+    </div>
   </div>
+  <div>
+    <ShowContent />
   </div>
+  <!-- Back to Top Button -->
+<button
+  @click="scrollToTop"
+  class="fixed bottom-6 right-6 bg-white/30 backdrop-blur-2xl hover:bg-gray-800 text-white px-4 py-3 shadow-lg transition duration-300 z-50"
+>
+  <i class="bi bi-caret-up text-3xl text-cyan-500"></i>
+</button>
+
 </template>
 
 <script setup>
-import { ref, onMounted, onUnmounted } from 'vue'
-import SearchField from './components/SearchField.vue'
-import ShowCase from './components/ShowCase.vue'
+import { ref } from 'vue'
+import ShowContent from './components/ShowContent.vue'
 
-const sidebarOpen = ref(false) // For mobile sidebar open/close
-const expanded = ref(true) // For desktop sidebar wide/collapsed
+const isOpen = ref(false)
+const isActivitiesOpen = ref(false)
+const isCompanyOPen = ref(false)
 
-// Detect desktop or mobile for toggle behavior
-const isDesktop = ref(window.innerWidth >= 768)
-function reloadPage() {
-  window.location.reload()
+
+const scrollToTop = () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' })
 }
 
-function onResize() {
-  isDesktop.value = window.innerWidth >= 768
-  if (isDesktop.value) {
-    sidebarOpen.value = true
-  } else {
-    sidebarOpen.value = false
+
+const toggleCompany = () => {
+  if (!isCompanyOPen.value) {
+    isActivitiesOpen.value = false // close the other dropdown
   }
+  isCompanyOPen.value = !isCompanyOPen.value
 }
 
-onMounted(() => {
-  window.addEventListener('resize', onResize)
-  onResize()
-})
+const toggleActivities = () => {
+  if (!isActivitiesOpen.value) {
+    isCompanyOPen.value = false // close the other dropdown
+  }
+  isActivitiesOpen.value = !isActivitiesOpen.value
+}
 
-onUnmounted(() => {
-  window.removeEventListener('resize', onResize)
-})
-</script>
-
-<script>
-// SidebarItem component with icon + label, supports collapsed mode showing only icon
-export default {
-  components: {
-    SidebarItem: {
-      props: {
-        icon: String,
-        label: String,
-        collapsed: Boolean,
-      },
-      computed: {
-        iconMap() {
-          return {
-            home: '🏠',
-            fire: '🔥',
-            collection: '📺',
-            clock: '⏰',
-            'thumb-up': '👍',
-            film: '🎬',
-          }
-        },
-      },
-      template: `
-        <a href="#" class="flex items-center space-x-3 px-4 py-2 rounded hover:bg-gray-100">
-          <span class="text-xl">{{ iconMap[icon] }}</span>
-          <span v-if="!collapsed" class="text-gray-800 font-medium">{{ label }}</span>
-        </a>
-      `,
-    },
-  },
+const toggleMenu = () => {
+  isOpen.value = !isOpen.value
 }
 </script>
 
 <style scoped>
-aside {
-  transition-property: transform, width;
-  transition-duration: 300ms;
-  transition-timing-function: ease-in-out;
+nav a {
+  transition: color 0.7s ease;
+}
+
+.background {
+  background-image: url('https://i.pinimg.com/736x/53/6a/c4/536ac430fdf158cd3bce9fcc7dd7b5fd.jpg');
 }
 </style>
