@@ -1,285 +1,206 @@
 <template>
-    <div>
-        <div class="p-8">
-            <div class="flex flex-col items-center mt-7 md:mt-16 lg:mt-24">
-                <h1 class="text-black text-3xl md:text-4xl lg:text-6xl">The Future of Manufacturing</h1>
-                <div class="text-black text-3xl md:text-4xl lg:text-6xl flex flex-row">
-                    <h1 class="text-black text-3xl md:text-4xl lg:text-6xl">with</h1>
-                    <h1 class="text-teal-900 text-3xl md:text-4xl lg:text-6xl">Latest Technology</h1>
-                </div>
-                <!-- crazy placings -->
-
-                <body class="bg-gray-50 flex items-center justify-center h-screen relative">
-
-                    <!-- Floating Icons: Left -->
-                    <div class="hidden lg:flex">
-                        <div class="absolute left-16 xl:left-40 top-[450px] -translate-y-1/2 flex flex-col gap-4">
-                            <button
-                                class="w-10 h-10 flex items-center justify-center bg-white border rounded-full shadow">
-                                <i class="bi bi-tools text-gray-700"></i>
-                            </button>
-                            <button class="absolute -left-10 xl:-left-20 top-[30px]">
-                                <i class="bi bi-arrow-up-right-circle text-teal-900 text-3xl"></i>
-                            </button>
-                            <button class="w-10 h-10 flex items-center justify-center bg-lime-200 rounded-full shadow">
-                                <i class="bi bi-badge-4k text-gray-800"></i>
-                            </button>
-                        </div>
-                    </div>
-
-                    <!-- Center Content -->
-                    <div class="text-center">
-                        <p class="text-2xl text-black mb-10 mt-14">
-                            Expert tech to elevate your manufacturing. Let’s take your business further.
-                        </p>
-                        <div class="flex flex-col sm:flex-row justify-center gap-4">
-                            <button class="bg-green-900 text-white px-10 py-3 rounded-full shadow">
-                                Get Started
-                            </button>
-                            <button class="bg-white border px-10 py-3 rounded-full shadow">
-                                Try Demo
-                            </button>
-                        </div>
-                    </div>
-
-                    <!-- Floating Icons: Right -->
-                    <div class="hidden lg:flex">
-                        <div class=" absolute right-16 xl:right-40 top-[450px] -translate-y-1/2 flex flex-col gap-4">
-                            <button class="w-10 h-10 flex items-center justify-center bg-lime-200 rounded-full shadow">
-                                <i class="bi bi-bar-chart-line text-gray-800"></i>
-                            </button>
-                            <button class="w-10 h-10 flex items-center justify-center bg-white border rounded-full shadow
-                                absolute right-10 xl:right-20 top-[50px]
-                                ">
-                                <i class="bi bi-list text-gray-700"></i>
-                            </button>
-                        </div>
-                    </div>
-
-                </body>
-                <!-- and this -->
-
-                <!-- review stars -->
-                <div class="text-center mt-20 mb-8">
-                    <div class="flex justify-center items-center gap-1 text-yellow-400 text-lg">
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <span class="text-black font-semibold ml-2">5.0</span>
-                    </div>
-                    <p class="text-sm text-gray-600 mt-1">from 60+ reviews</p>
-                </div>
-
-                <!-- stats cards -->
-                <div
-                    class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-4 max-w-6xl mx-auto items-end w-full px-4">
-                    <!-- Image -->
-                    <div class="rounded-lg h-[250px]">
-                        <img :src="require('@/assets/images/yellow.png')" class="w-full h-full object-cover"
-                            alt="Pipes" />
-                    </div>
-
-
-                    <!-- Clients -->
-                    <div
-                        class="bg-green-950 text-white rounded-xl p-6 flex flex-col justify-center items-center text-center shadow">
-                        <h2 class="text-3xl font-bold">100+</h2>
-                        <p class="mt-2 text-sm">Our Esteemed Clients and Partners</p>
-                    </div>
-
-                    <!-- Projects -->
-                    <div class="bg-white rounded-xl p-6 shadow text-center">
-                        <div class="flex justify-between items-center mb-2">
-                            <i class="bi bi-kanban-fill text-green-600 text-xl"></i>
-                            <i class="bi bi-three-dots-vertical text-gray-400"></i>
-                        </div>
-                        <h3 class="text-gray-500 text-sm">Total Projects</h3>
-                        <h2 class="text-3xl font-bold mt-1">1951+</h2>
-                        <p class="text-xs text-green-600 mt-1">Increased of 10% this month</p>
-                    </div>
-
-                    <!-- Years -->
-                    <div
-                        class="bg-lime-200 rounded-xl p-6 flex flex-col justify-center items-center text-center shadow">
-                        <h2 class="text-3xl font-bold">6+</h2>
-                        <p class="mt-2 text-sm">Years of Dedicated Service</p>
-                    </div>
-
-                    <!-- CTA -->
-                    <div
-                        class="bg-green-950 text-white rounded-xl px-6 h-[250px] flex flex-col justify-center items-center text-center shadow">
-                        <i class="bi bi-emoji-smile text-2xl mb-2"></i>
-                        <p>Achieve Optimal Efficiency and Boost Productivity</p>
-                    </div>
-                </div>
-            </div>
+    <div class="flex flex-col gap-2">
+        <div class="flex flex-row gap-2">
+            <i class="bi bi-geo-alt text-white text-lg"></i>
+            <h1 class="text-white text-lg">Location</h1>
         </div>
+        <!-- search -->
+        <div class="relative w-full">
+            <!-- Search Icon -->
+            <i class="bi bi-search text-gray-400 absolute left-3 top-[35px] -translate-y-1/2 text-lg"></i>
 
-        <!-- efficient -->
-        <div class="mt-24 bg-teal-950 w-full h-auto p-4">
-            <div class="flex flex-col mt-14 items-center gap-2">
-                <h1 class="text-white text-2xl md:text-4xl">Efficient and Integrated <br> Manufacturing Services</h1>
-                <h1 class="text-white text-xs md:text-sm">Simplify operations with our efficient, quality-focused
-                    services</h1>
-            </div>
-            <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
-                <!-- first -->
-                <div class=" bg-white/20 backdrop-blur-2xl rounded-lg p-8 flex flex-col gap-16">
-                    <div class="flex flex-row justify-between text-white">
-                        <i class="bi bi-asterisk text-3xl font-normal"></i>
-                        <i class="bi bi-arrow-up-right text-3xl font-normal"></i>
-                    </div>
-                    <div class="text-white flex flex-col">
-                        <h1 class="text-2xl font-normal">Production and Assembly</h1>
-                        <h1 class="text-sm font-normal">Details on production processes, assembly, <br> capacity and
-                            product types.</h1>
-                    </div>
-                </div>
-                <!-- second -->
-                <div class=" bg-white/20 backdrop-blur-2xl rounded-lg p-8 flex flex-col gap-16">
-                    <div class="flex flex-row justify-between text-white">
-                        <i class="bi bi-layers text-3xl font-normal"></i>
-                        <i class="bi bi-arrow-up-right text-3xl font-normal"></i>
-                    </div>
-                    <div class="text-white flex flex-col">
-                        <h1 class="text-2xl font-normal">Custom Manufacturing</h1>
-                        <h1 class="text-sm font-normal">Custom creation product with design and <br> customization
-                            options.</h1>
-                    </div>
-                </div>
-                <!-- third -->
-                <div class=" bg-white/20 backdrop-blur-2xl rounded-lg p-8 flex flex-col gap-16">
-                    <div class="flex flex-row justify-between text-white">
-                        <i class="bi bi-pen text-3xl font-normal"></i>
-                        <i class="bi bi-arrow-up-right text-3xl font-normal"></i>
-                    </div>
-                    <div class="text-white flex flex-col">
-                        <h1 class="text-2xl font-normal">Quality Control</h1>
-                        <h1 class="text-sm font-normal">Procedured and systems in place to ensure <br> high product
-                            quality.</h1>
-                    </div>
-                </div>
-                <!-- fourth -->
-                <div class=" bg-white/20 backdrop-blur-2xl rounded-lg p-8 flex flex-col gap-16">
-                    <div class="flex flex-row justify-between text-white">
-                        <i class="bi bi-flower2 text-3xl font-normal"></i>
-                        <i class="bi bi-arrow-up-right text-3xl font-normal"></i>
-                    </div>
-                    <div class="text-white flex flex-col">
-                        <h1 class="text-2xl font-normal">Technology and Innovation</h1>
-                        <h1 class="text-sm font-normal">Details on the latest manufacturing <br> technologies and
-                            ongoing innovations.</h1>
-                    </div>
-                </div>
-                <!-- fifth -->
-                <div class=" bg-white/20 backdrop-blur-2xl rounded-lg p-8 flex flex-col gap-16">
-                    <div class="flex flex-row justify-between text-white">
-                        <i class="bi bi-gem text-3xl font-normal"></i>
-                        <i class="bi bi-arrow-up-right text-3xl font-normal"></i>
-                    </div>
-                    <div class="text-white flex flex-col">
-                        <h1 class="text-2xl font-normal">Packaging and Logistics</h1>
-                        <h1 class="text-sm font-normal">Packaging and logistics for shipping to<br> Customers and
-                            distributors.</h1>
-                    </div>
-                </div>
-                <!-- sixth -->
-                <div class=" bg-white/20 backdrop-blur-2xl rounded-lg p-8 flex flex-col gap-16">
-                    <div class="flex flex-row justify-between text-white">
-                        <i class="bi bi-graph-up text-3xl font-normal"></i>
-                        <i class="bi bi-arrow-up-right text-3xl font-normal"></i>
-                    </div>
-                    <div class="text-white flex flex-col">
-                        <h1 class="text-2xl font-normal">Consulting Market Research</h1>
-                        <h1 class="text-sm font-normal">Srvices to help companies understand <br> market needs and
-                            provide strategic advice.</h1>
-                    </div>
-                </div>
-            </div>
+            <!-- Input -->
+            <input type="text" v-model="searchQuery" @input="fetchSuggestions" @focus="fetchSuggestions"
+                @blur="hideSuggestionsWithDelay" placeholder="Search on here"
+                class="w-full bg-slate-800/60 text-gray-400 pl-10 pr-4 py-4 rounded-md border-none outline-none" />
+            <div class="bg-slate-700/60 p-2 rounded-lg text-gray-400 text-lg mt-3">Search cities worldwide...</div>
+
+            <!-- Dropdown -->
+            <ul v-if="showSuggestions && suggestions.length"
+                class="absolute z-10 mt-1 w-full bg-slate-900 rounded-md shadow-lg max-h-[300px] overflow-auto">
+                <li v-for="(item, index) in suggestions" :key="index" @mousedown.prevent="selectCity(item)"
+                    class="px-4 py-6 text-white hover:bg-slate-700/60 cursor-pointer flex justify-between">
+                    <span>{{ item.name }}, {{ item.country }}</span>
+                    <span class="text-lg text-gray-400">{{ item.region }}</span>
+                </li>
+            </ul>
         </div>
-
-        <!-- next -->
-        <div class="py-20 px-6 md:px-20 bg-white mt-10">
-            <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-48 md:gap-12">
-                <!-- Left Side (Image with overlay card) -->
-                <div class="relative w-full md:w-1/2">
-                    <div class="bg-gray-100 rounded-2xl p-8 shadow-lg">
-                        <img src="@/assets/images/orr.png" alt="Chart" class="w-full h-auto" />
-                    </div>
-
-                    <!-- Overlay Card -->
-                    <div
-                        class="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2 bg-white rounded-2xl shadow-lg p-4 w-60 flex flex-col text-center">
-                        <div class="flex justify-between items-center mb-2">
-                            <div class="bg-green-300 ">
-                                <i class="bi bi-kanban-fill text-teal-950 text-xl"></i>
-                            </div>
-                            <i class="bi bi-three-dots-vertical text-gray-400"></i>
-                        </div>
-                        <div class="flex flex-row gap-2">
-                            <p class="text-black text-xl">Total Projects</p>
-                            <i class="bi bi-check-circle-fill text-teal-950 text-lg ">8%</i>
-                        </div>
-                        <h2 class="text-2xl font-bold">1951+</h2>
-                        <p class="text-xs text-green-600 mt-1">Increased of 18% this month</p>
-                    </div>
-                </div>
-
-                <!-- Right Side (Text content) -->
-                <div class="w-full md:w-1/2">
-                    <h2 class="text-2xl md:text-3xl font-bold mb-4">
-                        Key Benefits of Our System for <br />
-                        Your Business Efficiency
-                    </h2>
-                    <p class="text-gray-600 mb-6">
-                        Our systems boost productivity, cut costs, and drive business growth.
-                    </p>
-
-                    <ul class="space-y-6">
-                        <li class="flex items-start gap-3">
-                            <i class="bi bi-check-circle-fill text-teal-950 text-xl mt-1"></i>
-                            <div>
-                                <h3 class="font-semibold">Boosting Quality with Tech</h3>
-                                <p class="text-sm text-gray-600">
-                                    With advanced technology, we help you achieve top product quality. Discover how we
-                                    can enhance your standards.
-                                </p>
-                            </div>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <i class="bi bi-check-circle-fill text-teal-950 text-xl mt-1"></i>
-                            <div>
-                                <h3 class="font-semibold">Optimization Production Process</h3>
-                                <p class="text-sm text-gray-600">
-                                    Boost factory efficiency and productivity with our innovative solutions. See how the
-                                    latest technology can maximize your output.
-                                </p>
-                            </div>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <i class="bi bi-check-circle-fill text-teal-950 text-xl mt-1"></i>
-                            <div>
-                                <h3 class="font-semibold">AI-Driven Production</h3>
-                                <p class="text-sm text-gray-600">
-                                    Leverage the power of AI to transform your manufacturing processes, achieving faster
-                                    and more effective results.
-                                </p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-       
-        <!-- ending -->
     </div>
+    <!-- search end above -->
+
+    <!-- second -->
+    <div class="bg-gradient-to-r from-slate-900 to-slate-700/60  p-3 rounded-xl shadow-md text-white"
+        v-if="weatherData">
+        <div class="flex justify-between items-center mb-4">
+            <div>
+                <h2 class="text-2xl font-bold">{{ weatherData.location.name }}</h2>
+                <p class="text-sm text-gray-300">{{ weatherData.location.region }}</p>
+            </div>
+            <div class="text-right">
+                <h2 class="text-3xl font-bold">{{ weatherData.current.temp_c }}°C</h2>
+                <p class="text-sm text-gray-400">Feels like {{ weatherData.current.feelslike_c }}°</p>
+            </div>
+        </div>
+
+        <div class="flex items-center gap-3 mb-4">
+            <img :src="'https:' + weatherData.current.condition.icon" alt="weather icon" class="w-12 h-12" />
+            <div>
+                <p class="font-semibold text-lg">{{ weatherData.current.condition.text }}</p>
+                <p class="text-sm text-gray-300">Few Clouds</p>
+            </div>
+        </div>
+
+        <div class="flex justify-between text-sm text-gray-300">
+            <span>↓ {{ weatherData.forecast.forecastday[0].day.mintemp_c }}°</span>
+            <span>↑ {{ weatherData.forecast.forecastday[0].day.maxtemp_c }}°</span>
+            <span>💧 {{ weatherData.forecast.forecastday[0].day.daily_chance_of_rain }}%</span>
+        </div>
+    </div>
+
+
+    <!-- third -->
+    <div class="space-y-5">
+        <div class="bg-blue-900/70 p-3 rounded-lg flex flex-row items-center text-blue-400 gap-3 "
+            onclick="location.reload();">
+            <i class="bi bi-brightness-high text-3xl"></i>
+            <h1 class="text-2xl">Current</h1>
+        </div>
+        <div class=" p-3 hover:bg-slate-800 rounded-lg flex flex-row items-center text-white gap-3" @click="showAlert">
+            <i class="bi bi-calendar-minus text-3xl"></i>
+            <h1 class="text-2xl">Forecast</h1>
+        </div>
+        <div class=" p-3 hover:bg-slate-800 rounded-lg flex flex-row items-center text-white gap-3" @click="showAlert">
+            <i class="bi bi-bar-chart text-3xl"></i>
+            <h1 class="text-2xl">Details</h1>
+        </div>
+    </div>
+
+    <!-- Fifth: Sunrise & Sunset -->
+    <div v-if="weatherData" class="bg-slate-700/60 p-3 rounded-lg text-white">
+        <h2 class="text-lg font-semibold mb-4">Sunrise & Sunset</h2>
+        <div class="flex justify-between">
+            <div class="flex items-center gap-2">
+                <i class="bi bi-sunrise text-yellow-400 text-2xl"></i>
+                <div>
+                    <p class="text-sm text-gray-300">Sunrise</p>
+                    <p class="text-lg font-bold -mt-2">{{ sunrise }}</p>
+                </div>
+            </div>
+            <div class="flex items-center gap-2">
+                <i class="bi bi-sunset text-orange-400 text-2xl"></i>
+                <div>
+                    <p class="text-sm text-gray-300">Sunset</p>
+                    <p class="text-lg font-bold -mt-2">{{ sunset }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Sixth: Air Quality -->
+    <div class="bg-slate-700/60 p-3 rounded-lg text-white">
+        <h2 class="text-lg font-semibold mb-4">Air Quality</h2>
+        <div class="flex items-center justify-between mb-2">
+            <div class="w-full h-3 bg-slate-600 rounded-full overflow-hidden">
+                <div class="h-3 bg-green-400" :style="{ width: airQualityPercentage + '%' }"></div>
+            </div>
+            <span class="ml-3 text-sm px-3 py-1 rounded-full" :class="{
+                'bg-green-600': airQualityLabel === 'Good',
+                'bg-yellow-500': airQualityLabel === 'Moderate',
+                'bg-orange-600': airQualityLabel === 'Unhealthy',
+                'bg-red-700': airQualityLabel === 'Hazardous',
+            }">
+                {{ airQualityLabel }}
+            </span>
+        </div>
+        <div class="flex justify-between text-xs text-gray-400">
+            <span>0</span>
+            <span>50</span>
+            <span>100</span>
+        </div>
+    </div>
+
 </template>
 
 
 
 <script setup>
-</script>
+import { ref, computed } from 'vue'
 
-<style></style>
+// Add these right after imports
+const props = defineProps({
+    city: String,             // Receive from parent
+    weatherData: Object       // Receive from parent
+})
+
+const emit = defineEmits(['update-city'])  // For communicating with parent
+
+const suggestions = ref([])
+const showSuggestions = ref(false)
+const isLoading = ref(false)
+const errorMsg = ref('')
+const searchQuery = ref('')  // For local search input only
+
+
+const fetchSuggestions = async () => {
+    if (!searchQuery.value) {
+        suggestions.value = []
+        showSuggestions.value = false
+        return
+    }
+
+    isLoading.value = true
+    errorMsg.value = ''
+    suggestions.value = []
+
+    try {
+        const res = await fetch(`https://api.weatherapi.com/v1/search.json?key=93c4e89ebb004f31888200554252806&q=${searchQuery.value}`)
+        const data = await res.json()
+        if (data.length === 0) {
+            errorMsg.value = 'No cities found.'
+        } else {
+            suggestions.value = data
+            showSuggestions.value = true
+        }
+    } catch (err) {
+        console.error('Error fetching suggestions:', err)
+        errorMsg.value = 'Failed to fetch city suggestions.'
+    } finally {
+        isLoading.value = false
+    }
+}
+
+
+const selectCity = (cityObj) => {
+    emit('update-city', cityObj.name)
+    searchQuery.value = `${cityObj.name}, ${cityObj.country}`
+}
+
+const hideSuggestionsWithDelay = () => {
+    setTimeout(() => showSuggestions.value = false, 200)
+}
+
+
+const showAlert = () => {
+    window.alert('This feature would be available soon 😊')
+}
+
+const airQualityPercentage = computed(() => {
+    const pm2_5 = props.weatherData?.current?.air_quality?.pm2_5 || 0
+    return Math.min((pm2_5 / 100) * 100, 100) // clamp to 100%
+})
+
+const airQualityLabel = computed(() => {
+    const pm = props.weatherData?.current?.air_quality?.pm2_5 || 0 
+    if (pm <= 12) return 'Good'
+    else if (pm <= 35) return 'Moderate'
+    else if (pm <= 55) return 'Unhealthy'
+    else return 'Hazardous'
+})
+
+
+const sunrise = computed(() => props.weatherData?.forecast?.forecastday[0]?.astro?.sunrise || 'N/A')
+const sunset = computed(() => props.weatherData?.forecast?.forecastday[0]?.astro?.sunset || 'N/A')
+
+
+</script>

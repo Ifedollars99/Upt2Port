@@ -1,24 +1,40 @@
 ## ✅ MyProjectName
-This project is names Prodmast project
-A minor (landing page) task assigned by my mentor.
+This project is name is called Weather project.
 
+# 🌦️ Weather Dashboard
+![Weather](./src/assets/images/weather.png)
 
-## ✅ Summmary
-A responsive web application that showcases The future of manufacturing with the latest technology and great ambitions  with a sleek, intuitive interface built using Vue.js and Tailwind CSS.
+# Summary
+An elegant, real-time weather application with beautiful visuals and accurate forecasts worldwide. Built with Vue.js and the WeatherAPI.
 
+## ✨ Features
+The features are listed as of below 
+- **📍 Location Search**  
+  Autocomplete for cities worldwide with detailed weather information
+- **🌤️ Current Conditions**  
+  Temperature, feels-like, humidity, wind speed, and visibility
+- **📡 Live Updates**  
+  Real-time weather data refresh
+- **🌅 Sunrise/Sunset**  
+  Beautifully displayed golden hour times
+- **🌡️ Air Quality Index**  
+  Color-coded PM2.5 monitoring
+- **📱 Fully Responsive**  
+  Works flawlessly on all devices
 
-## ✅ Features
-- User-Friendly
-- Responsive design for all screen sizes
-- Mobile-first interface
+## 🛠️ Technologies Used
 
-## 🛠 Tech Stack
-**Frontend:** Vue 3, Tailwind CSS. 
+| Category        | Technologies                          |
+|-----------------|---------------------------------------|
+| Frontend        | Vue 3, Tailwind CSS, Hero Icons       |
+| API             | WeatherAPI                            |
+| Build Tools     | Vite                                  |
 
+## 🚀 Installation
 
-## 📸 Screenshot
-![estate](./src/assets/images/dribblepic.png)
-
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/weather-dashboard.git
 
 ## 🤝 Contributing
 Contributions are welcome!  
