@@ -1,5 +1,7 @@
 <template>
-   
+
+
+
       <!-- First: Current Weather Overview -->
       <div v-if="weatherData" class="bg-slate-700/60 p-6 rounded-xl text-white space-y-4">
          <div class="flex justify-between items-start">

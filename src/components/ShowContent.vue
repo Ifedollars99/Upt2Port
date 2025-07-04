@@ -17,7 +17,8 @@
 
             <!-- Dropdown -->
             <ul v-if="showSuggestions && suggestions.length"
-                class="absolute z-10 mt-1 w-full bg-slate-900 rounded-md shadow-lg max-h-[300px] overflow-auto">
+                class="absolute z-10 mt-1 w-full bg-slate-900 rounded-md shadow-lg max-h-[300px] overflow-auto transition-opacity duration-200"
+                :class="showSuggestions ? 'opacity-100' : 'opacity-0'">>
                 <li v-for="(item, index) in suggestions" :key="index" @mousedown.prevent="selectCity(item)"
                     class="px-4 py-6 text-white hover:bg-slate-700/60 cursor-pointer flex justify-between">
                     <span>{{ item.name }}, {{ item.country }}</span>
@@ -172,9 +173,11 @@ const fetchSuggestions = async () => {
 
 
 const selectCity = (cityObj) => {
-    emit('update-city', cityObj.name)
-    searchQuery.value = `${cityObj.name}, ${cityObj.country}`
-}
+    emit('update-city', cityObj.name);
+    searchQuery.value = `${cityObj.name}, ${cityObj.country}`;
+    showSuggestions.value = false; // Add this line to hide dropdown immediately
+    suggestions.value = []; // Optional: Clear suggestions array
+};
 
 const hideSuggestionsWithDelay = () => {
     setTimeout(() => showSuggestions.value = false, 200)
@@ -191,7 +194,7 @@ const airQualityPercentage = computed(() => {
 })
 
 const airQualityLabel = computed(() => {
-    const pm = props.weatherData?.current?.air_quality?.pm2_5 || 0 
+    const pm = props.weatherData?.current?.air_quality?.pm2_5 || 0
     if (pm <= 12) return 'Good'
     else if (pm <= 35) return 'Moderate'
     else if (pm <= 55) return 'Unhealthy'
