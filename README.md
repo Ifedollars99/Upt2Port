@@ -2,7 +2,8 @@
 This project is name is called Weather project.
 
 # 🌦️ Weather Dashboard
-![Weather](./src/assets/images/weather.png)
+![Weather](./public/images/weather.png)
+
 
 # Summary
 An elegant, real-time weather application with beautiful visuals and accurate forecasts worldwide. Built with Vue.js and the WeatherAPI.
