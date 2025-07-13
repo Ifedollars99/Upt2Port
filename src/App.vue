@@ -65,7 +65,7 @@
           Me!</a>
         <div class="bg-blue-200 rounded-3xl px-4 py-1 flex flex-row justify-center items-center animate-pulse">
           <i class="bi bi-dot text-blue-500 text-5xl font-bold"></i>
-          <h1 class="text-blue-500 text-xl mt-2 font-normal hover:scale-110 ">Available 24/7 😉</h1>
+          <h1 class="text-blue-500 text-xl font-normal hover:scale-110 ">Available 24/7 😉</h1>
         </div>
       </div>
     </div>

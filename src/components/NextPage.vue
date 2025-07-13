@@ -223,7 +223,7 @@
       <!-- dev cent  -->
       <div class="border-1 border-gray-200 w-auto h-auto p-4 rounded-xl flex flex-col justify-center items-start gap-4">
         <div class="bg-gray-300 rounded-xl p-3 w-full">
-          <img class="w-full h-[250px] md:h-[300px] lg:h-[250px] xl:h-[300px] rounded-lg  hover:shadow-2xl"
+          <img class="w-full h-[200px] md:h-[300px] lg:h-[250px] xl:h-[200px] rounded-lg  hover:shadow-2xl"
             :src="require('@/assets/images/ife2.png')" alt="a Devcent picture">
         </div>
         <h1 class="text-black text-4xl">🚀 Devcent Project</h1>
@@ -239,7 +239,7 @@
       <!-- Estate  -->
       <div class="border-1 border-gray-200 w-auto h-auto p-4 rounded-xl flex flex-col justify-center items-start gap-4">
         <div class="bg-gray-300 rounded-xl p-3 w-full">
-          <img class="w-full h-[250px] md:h-[300px] lg:h-[250px] xl:h-[300px] rounded-lg  hover:shadow-2xl"
+          <img class="w-full h-[200px] md:h-[300px] lg:h-[250px] xl:h-[200px] rounded-lg  hover:shadow-2xl"
             :src="require('@/assets/images/ife4.png')" alt="a Real picture">
         </div>
         <h1 class="text-black text-4xl">🏠 Real Estate Listing Platform</h1>
@@ -254,7 +254,7 @@
       <!-- Weather  -->
       <div class="border-1 border-gray-200 w-auto h-auto p-4 rounded-xl flex flex-col justify-center items-start gap-4">
         <div class="bg-gray-300 rounded-xl p-3 w-full">
-          <img class="w-full h-[250px] md:h-[300px] lg:h-[250px] xl:h-[300px] rounded-lg  hover:shadow-2xl"
+          <img class="w-full h-[200px] md:h-[300px] lg:h-[250px] xl:h-[200px] rounded-lg  hover:shadow-2xl"
             :src="require('@/assets/images/ife1.png')" alt="a Weather picture">
         </div>
         <h1 class="text-black text-4xl">🌤 Weather Project</h1>
@@ -272,7 +272,7 @@
       <!-- Prodmast  -->
       <div class="border-1 border-gray-200 w-auto h-auto p-4 rounded-xl flex flex-col justify-center items-start gap-4">
         <div class="bg-gray-300 rounded-xl p-3 w-full">
-          <img class="w-full h-[250px] md:h-[300px] lg:h-[250px] xl:h-[300px] rounded-lg  hover:shadow-2xl"
+          <img class="w-full h-[200px] md:h-[300px] lg:h-[250px] xl:h-[200px] rounded-lg  hover:shadow-2xl"
             :src="require('@/assets/images/ife3.png')" alt="a Prodmast picture">
         </div>
         <h1 class="text-black text-4xl">🧠 Prodmast – Productivity Tracker</h1>
@@ -287,8 +287,8 @@
       <!-- Prodmast end  -->
       <!-- Movie  -->
       <div class="border-1 border-gray-200 w-auto h-auto p-4 rounded-xl flex flex-col justify-center items-start gap-4">
-        <div class="bg-gray-300 rounded-xl p-3 w-full">
-          <img class="w-full h-[250px] md:h-[300px] lg:h-[250px] xl:h-[300px] rounded-lg  hover:shadow-2xl"
+        <div class="bg-gray-300 rounded-xl p-3 w-full md:-mt-14">
+          <img class="w-full h-[200px] md:h-[300px] lg:h-[250px] xl:h-[200px] rounded-lg  hover:shadow-2xl"
             :src="require('@/assets/images/ife5.png')" alt="a Movie picture">
         </div>
         <h1 class="text-black text-4xl">🎬 Movie Explorer App</h1>
@@ -303,7 +303,7 @@
       <!-- Obito  -->
       <div class="border-1 border-gray-200 w-auto h-auto p-4 rounded-xl flex flex-col justify-center items-start gap-4">
         <div class="bg-gray-300 rounded-xl p-3 w-full">
-          <img class="w-full h-[250px] md:h-[300px] lg:h-[250px] xl:h-[300px] rounded-lg  hover:shadow-2xl"
+          <img class="w-full h-[200px] md:h-[300px] lg:h-[250px] xl:h-[200px] rounded-lg  hover:shadow-2xl"
             :src="require('@/assets/images/ife6.png')" alt="a Estatein picture">
         </div>
         <h1 class="text-black text-4xl">🏘️ Estatein – Modern Real Estate Showcase</h1>
@@ -327,7 +327,7 @@
           <h1 class="text-black text-xl font-medium mt-2">Frontend developer as </h1>
           <div class="bg-blue-200 rounded-3xl px-4 py-1 flex flex-row justify-center items-center animate-pulse">
             <i class="bi bi-dot text-blue-500 text-5xl -mt-1 font-bold"></i>
-            <h1 class="text-blue-500 text-sm mt-2 font-normal hover:scale-110 ">A Freelancer </h1>
+            <h1 class="text-blue-500 text-sm font-normal hover:scale-110 ">A Freelancer </h1>
           </div>
         </div>
       </div>
@@ -335,7 +335,7 @@
     </div>
 
     <!-- reach  -->
-    <div data-aos="fade-down" class="mt-32 flex flex-col justify-center items-center p-32">
+    <div data-aos="fade-down" class="mt-32 flex flex-col justify-center items-center px-2 md:px-32 lg:px-2 xl:px-32 py-0">
       <h1 class="text-black text-4xl font-bold">Reach Out to me.</h1>
       <h1 class="text-gray-500 text-xl">I’m all about building bold ideas, leveling up with smart people, and creating
         what’s next. Hit me up if you’re down to collab, see my portfolio deck, or spark a conversation.
@@ -359,7 +359,7 @@
         name="message" rows="6" placeholder="Write Your Message" required></textarea>
       <!-- send  button  -->
       <button
-        class=" col-span-1 md:col-span-2 lg:col-span-1 xl:col-span-2 rounded-xl w-full h-auto p-4 flex items-center justify-center hover:scale-110"
+        class=" col-span-1 md:col-span-2 lg:col-span-1 xl:col-span-2 rounded-xl w-full h-auto p-2 flex items-center justify-center hover:scale-110"
         style="background-image: url('https://i.pinimg.com/736x/57/be/f7/57bef75efe25aafe84bb94748b5b3bf3.jpg');">
         <button class="text-white text-xl md:text-2xl font-bold">Send
           Message</button>
