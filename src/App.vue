@@ -1,110 +1,186 @@
 <template>
-  <div v-if="loading" class="flex items-center justify-center h-screen w-full bg-slate-900">
-    <div class="flex flex-col items-center gap-3">
-      <i class="bi bi-cloud-sun text-5xl text-blue-400"></i>
-      <i class="bi bi-arrow-clockwise text-xl text-blue-400 animate-spin"></i>
-      <p class="text-white text-lg">Loading weather dashboard... </p>
+  <!-- Loading screen -->
+  <div v-if="loading" class="flex items-center justify-center h-screen w-full bg-white">
+    <div class="flex flex-col items-center bg-gray-200 shadow-lg p-2">
+      <i class="bi bi-sun text-4xl text-gray-400 animate-spin"></i>
+      <p class="text-black text-xl font-bold">Loading IFEDOLLARS Portfolio 😁... </p>
     </div>
   </div>
 
+  <!-- Main content -->
   <div v-else>
-    <!-- Navbar -->
-    <nav class="bg-slate-700/60 backdrop-blur-xl shadow-md w-full z-10 py-2 px-6">
-      <div class="flex justify-between h-16">
-        <!-- Logo -->
-        <div class="flex items-center gap-3">
-          <i class="bi bi-cloud text-3xl text-blue-600"></i>
-          <h1 class="text-sm md:text-xl text-white mt-0.5 font-bold">Weather Dashboard</h1>
-        </div>
-        <div class="flex flex-row gap-2 md:gap-6 items-center">
-          <a href="#" onclick="location.reload();"> </a>
-            <i class="bi bi-arrow-clockwise text-white text-3xl -mt-3 md:-mt-5 no-underline font-normal"></i>
-            <div class="flex flex-row gap-2">
-              <h1 class="text-white no-underline text-xs md:text-sm ">todays date:</h1>
-              <p class="text-xs md:text-sm text-white">{{ currentDate }}</p>
-              <p class="text-xs text-gray-300 ">{{ currentTime }}</p>
-            </div>
-          
-        </div>
-      </div>
-    </nav>
+    <div class="p-10 lg:p-4 lg:max-w-[calc(100%-600px)] md:mx-auto">
+      <!-- Left vertical line -->
+      <div class="hidden lg:block fixed top-0 left-[300px] h-full w-px bg-gray-300 z-0"></div>
+      <!-- Right vertical line -->
+      <div class="hidden lg:block fixed top-0  right-[300px] h-full w-px bg-gray-300 z-0"></div>
 
-    <!-- main content -->
-    <div class="flex flex-col items-center md:flex-row p-2 mt-10 gap-4">
-      <!-- ShowContent -->
-      <div class="grid grid-cols-1 gap-3 w-full md:w-2/6">
-        <ShowContent :city="city" :weather-data="weatherData" @update-city="updateCity" />
+
+      <!-- top shii  -->
+      <div class="fixed top-6 left-1/2 transform -translate-x-1/2 bg-white/30 backdrop-blur-2xl flex flex-row items-center gap-3 lg:gap-14 hover:bg-gray-200 hover:scale-110
+       text-white px-7 lg:px-14 py-1 rounded-xl border-1 border-gray-300 transition duration-300 z-50">
+        <!-- home -->
+        <i @click="refreshPage" class="bi bi-house-door text-2xl text-gray-400 hover:text-black cursor-pointer"></i>
+        <div class="w-px h-12 bg-gray-300"></div>
+        <!-- twitter  -->
+        <a href="https://x.com/IfedollarsAvr?t=KWrkgQdZLuh7Y7xaCLCWeg&s=09" target="_blank" rel="noopener">
+          <i class="bi bi-twitter-x text-2xl text-gray-400 hover:text-black"></i>
+        </a>
+        <div class="w-px h-12 bg-gray-300 cursor-pointer"></div>
+        <!-- github  -->
+        <a href="https://github.com/Ifedollars99" target="_blank" rel="noopener">
+          <i class="bi bi-github text-2xl text-gray-400 hover:text-black cursor-pointer"></i>
+        </a>
+        <div class="w-px h-12 bg-gray-300"></div>
+        <!-- LinkedIn  -->
+        <a href="https://www.linkedin.com/in/taofeeq-ifedolapo-7890162ba?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+          target="_blank" rel="noopener">
+          <i class="bi bi-linkedin text-2xl text-gray-400 hover:text-black cursor-pointer"></i>
+        </a>
+        <div class="w-px h-12 bg-gray-300"></div>
+        <!-- resume  -->
+        <a href="/resume.pdf" download>
+          <i class="bi bi-file-person text-2xl text-gray-400 hover:text-black cursor-pointer"></i>
+        </a>
       </div>
-      <!-- ShowDiv -->
-      <div class="grid grid-cols-1 gap-5 w-full md:w-3/4">
-        <ShowDiv :weather-data="weatherData" />
+
+      <!-- abt my self -->
+      <div class="flex flex-col items-start  mt-32 gap-2" data-aos="fade-in" data-aos-duration="2000">
+        <img class="rounded-full w-24 h-24"
+          src="https://pbs.twimg.com/profile_images/1942172792595582976/KVeSxE3-_400x400.jpg" alt="Ifedollars 🐐">
+        <h1 class="text-black font-bold text-2xl md:text-4xl"> Greetings!! I’m Ifedollars,🐐 <br>
+          A Software Developer.🧑🏿‍💻 </h1>
+        <h1 class="text-gray-500 text-sm md:text-xl font-normal text-left gap-2 mt-1">— a full-stack dev who builds
+          sites
+          that SLAPS. 🔥From clean code to bold UI. <br>
+          — I am Confident that i can be of <span class="text-black font-bold"> "GREAT VALUE"</span> to your Prestigious
+          Company or Team. <br>
+          — driven by vision 👁️, built with ambition 🚀, shaped through creativity 🎨🧠. </h1>
+      </div>
+      <!-- button  -->
+      <div class="flex flex-row mt-10 gap-4">
+        <a href="https://wa.me/2348137628419?text=Hello 👋 i am ......... by name and i saw your portfolio!"
+          target="_blank" rel="noopener noreferrer"
+          class="bg-black no-underline font-bold flex items-center justify-center rounded-lg px-4 py-1 text-white text-xl animate-bounce  hover:shadow-[0_0_15px_3px_rgba(255,255,255,0.4)] transition duration-300">Hire
+          Me!</a>
+        <div class="bg-blue-200 rounded-3xl px-4 py-1 flex flex-row justify-center items-center animate-pulse">
+          <i class="bi bi-dot text-blue-500 text-5xl font-bold"></i>
+          <h1 class="text-blue-500 text-xl mt-2 font-normal hover:scale-110 ">Available 24/7 😉</h1>
+        </div>
       </div>
     </div>
 
-    <!-- Back to Top Button -->
-    <button @click="scrollToTop"
-      class="fixed bottom-6 right-6 md:hidden bg-white/30 backdrop-blur-2xl hover:bg-gray-800 text-white px-4 py-3 shadow-lg transition duration-300 z-50">
-      <i class="bi bi-caret-up text-3xl text-cyan-500"></i>
-    </button>
+    <!-- wrapper with overflow -->
+    <div class="w-full mt-20 px-4 overflow-hidden">
+      <!-- auto-scroll container -->
+      <div class="carousel-track flex gap-5 w-max animate-scroll">
+        <!-- Repeat your images here -->
+        <div v-for="i in 2" :key="i" class="flex gap-5">
+          <!-- duplicate to make it seamless -->
+          <div v-for="img in images" :key="img"
+            class="bg-gray-100 rounded-lg p-4 transition-transform duration-300 ease-in-out hover:scale-110">
+            <div class="bg-gray-500 rounded-lg p-3">
+              <img class="w-[300px] h-[200px] rounded-lg  hover:shadow-2xl" :src="img" alt="a group of images" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <!-- Next pages -->
+    <div data-aos="fade-up" data-aos-delay="200" class="lg:max-w-[calc(100%-600px)] lg:mx-auto mt-32 p-10 lg:p-4">
+      <NextPage />
+      <!-- next page end  -->
+    </div>
+
+
+
+    <!-- end  -->
   </div>
+
+
+  <!-- Back to Top Button -->
+  <button @click="scrollToTop"
+    class="fixed bottom-6 right-6 md:hidden bg-white/30 backdrop-blur-2xl hover:bg-gray-200 text-white px-4 py-3 shadow-lg transition duration-300 hover:scale-110 z-50">
+    <i class="bi bi-caret-up text-3xl text-blue-700"></i>
+  </button>
 </template>
 
 
+
 <script setup>
-import ShowContent from './components/ShowContent.vue';
-import ShowDiv from './components/ShowDiv.vue'
-import { ref, onMounted, onUnmounted } from 'vue'
 
-const city = ref('Lagos')
-const weatherData = ref(null)
+import { ref, onMounted } from 'vue';
+import AOS from 'aos'
+import { useRouter } from 'vue-router';
+import NextPage from './components/NextPage.vue';
+
+
+
+
+const router = useRouter()
 const loading = ref(true)
-const currentDate = ref('')
-const currentTime = ref('')
+const images = [
+  require('@/assets/images/ife1.png'),
+  require('@/assets/images/ife2.png'),
+  require('@/assets/images/ife3.png'),
+  require('@/assets/images/ife4.png'),
+]
 
-//  date/time
-const updateDateTime = () => {
-  const now = new Date()
-  currentDate.value = now.toLocaleDateString('en-US', {
-    weekday: 'long',
-    month: 'long',
-    day: 'numeric',
-    year: 'numeric'
-  })
-  currentTime.value = now.toLocaleTimeString('en-US', {
-    hour: '2-digit',
-    minute: '2-digit',
-    hour12: true
-  })
+
+
+//  end
+
+
+router.afterEach(() => {
+  setTimeout(() => {
+    AOS.refresh()
+  }, 500)
+})
+
+const refreshPage = () => {
+  window.location.reload()
 }
 
-const fetchData = async () => {
-  try {
-    const response = await fetch(
-      `https://api.weatherapi.com/v1/forecast.json?key=93c4e89ebb004f31888200554252806&q=${city.value}&days=3&aqi=yes&alerts=yes`
-    )
-    weatherData.value = await response.json()
-  } catch (error) {
-    console.error("Weather fetch failed:", error)
-  }
-}
-
-const updateCity = (newCity) => {
-  city.value = newCity
-  fetchData()
-}
+onMounted(() => {
+  setTimeout(() => {
+    loading.value = false
+  }, 3000) // 2 seconds
+})
 
 const scrollToTop = () => {
   window.scrollTo({ top: 0, behavior: 'smooth' })
 }
 
-onMounted(() => {
-  fetchData()
-  updateDateTime() // Initial call
-  const timeInterval = setInterval(updateDateTime, 60000) // Update every minute
-  setTimeout(() => loading.value = false, 3000)
-  
-  onUnmounted(() => {
-    clearInterval(timeInterval)
-  })
-})
 </script>
+
+<style setup>
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll {
+  animation: scroll 30s linear infinite;
+}
+
+.carousel-track::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -50px;
+  width: 50px;
+  height: 100%;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.1), transparent);
+  z-index: 10;
+  pointer-events: none;
+}
+</style>
