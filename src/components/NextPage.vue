@@ -25,9 +25,9 @@
     <div data-aos="fade-left"
       class="bg-gray-200 p-4 rounded-lg transition-transform duration-300 ease-in-out hover:scale-110 shadow-md">
       <!-- mine -->
-      <img class="rounded-xl w-[400px] h-[450px] md:h-[500px] lg:h-[450px] xl:h-[500px]"
+      <img class="rounded-xl w-[400px] hover:scale-110"
         :src="require('@/assets/images/ife7.png')" alt="Myself13" />
-      <p class="text-black text-xl mt-3">@Ifedollars99🐐</p>
+      <p class="text-black text-xl mt-3">Ifedollars🐐</p>
     </div>
   </div>
   <!-- tech stacks  -->
@@ -217,16 +217,16 @@
 
   <!-- projects  -->
   <div data-aos="fade-down" class="mt-32 flex flex-col justify-center items-center">
-    <div class="text-black text-4xl font-bold">💻🛠️ Projects I Have Been Working On......</div>
+    <div class="text-black text-4xl font-bold">💻 Projects I Have Been Working On......</div>
     <!-- grid pj  -->
-    <div class=" p-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 gap-4 justify-items-center mt-10">
+    <div class=" p-3 md:p-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 gap-4 justify-items-center mt-10">
       <!-- dev cent  -->
       <div class="border-1 border-gray-200 w-auto h-auto p-4 rounded-xl flex flex-col justify-center items-start gap-4">
         <div class="bg-gray-300 rounded-xl p-3 w-full">
-          <img class="w-full h-[200px] md:h-[300px] lg:h-[250px] xl:h-[200px] rounded-lg  hover:shadow-2xl"
+          <img class="w-full rounded-lg  hover:shadow-2xl"
             :src="require('@/assets/images/ife2.png')" alt="a Devcent picture">
         </div>
-        <h1 class="text-black text-4xl">🚀 Devcent Project</h1>
+        <h1 class="text-black text-4xl"> Devcent Project</h1>
         <h1 class="text-gray-600 text-sm">Devcent is a hands-on tech training platform focused on transforming beginners
           into job-ready developers.
           Through real-world projects, mentorship, and intensive learning sprints, Devcent equips learners with
@@ -239,10 +239,10 @@
       <!-- Estate  -->
       <div class="border-1 border-gray-200 w-auto h-auto p-4 rounded-xl flex flex-col justify-center items-start gap-4">
         <div class="bg-gray-300 rounded-xl p-3 w-full">
-          <img class="w-full h-[200px] md:h-[300px] lg:h-[250px] xl:h-[200px] rounded-lg  hover:shadow-2xl"
+          <img class="w-full rounded-lg  hover:shadow-2xl"
             :src="require('@/assets/images/ife4.png')" alt="a Real picture">
         </div>
-        <h1 class="text-black text-4xl">🏠 Real Estate Listing Platform</h1>
+        <h1 class="text-black text-4xl"> Real Estate Listing Platform</h1>
         <h1 class="text-gray-600 text-sm">This project is a clean and responsive real estate site built to showcase
           properties with modern UI and smooth user experience. It features elegant layouts, property cards, and dynamic
           interactions — perfect for buyers, renters, or agents looking for homes with style and function.</h1>
@@ -254,10 +254,10 @@
       <!-- Weather  -->
       <div class="border-1 border-gray-200 w-auto h-auto p-4 rounded-xl flex flex-col justify-center items-start gap-4">
         <div class="bg-gray-300 rounded-xl p-3 w-full">
-          <img class="w-full h-[200px] md:h-[300px] lg:h-[250px] xl:h-[200px] rounded-lg  hover:shadow-2xl"
+          <img class="w-full rounded-lg  hover:shadow-2xl"
             :src="require('@/assets/images/ife1.png')" alt="a Weather picture">
         </div>
-        <h1 class="text-black text-4xl">🌤 Weather Project</h1>
+        <h1 class="text-black text-4xl"> Weather Project</h1>
         <h1 class="text-gray-600 text-sm">This is a sleek, real-time weather app that fetches live weather data using an
           external API. It displays temperature, conditions, and icons based on the user's location or searched city —
           all wrapped in a clean, responsive UI. Built with precision, it combines frontend logic with API integration
@@ -272,10 +272,10 @@
       <!-- Prodmast  -->
       <div class="border-1 border-gray-200 w-auto h-auto p-4 rounded-xl flex flex-col justify-center items-start gap-4">
         <div class="bg-gray-300 rounded-xl p-3 w-full">
-          <img class="w-full h-[200px] md:h-[300px] lg:h-[250px] xl:h-[200px] rounded-lg  hover:shadow-2xl"
+          <img class="w-full  rounded-lg  hover:shadow-2xl"
             :src="require('@/assets/images/ife3.png')" alt="a Prodmast picture">
         </div>
-        <h1 class="text-black text-4xl">🧠 Prodmast – Productivity Tracker</h1>
+        <h1 class="text-black text-4xl"> Prodmast – Productivity Tracker</h1>
         <h1 class="text-gray-600 text-sm">Prodmast is a smart productivity dashboard that helps users manage their
           tasks, goals, and focus levels all in one place. It combines clean UI with real-time interactivity, giving
           users a smooth experience to stay organized and intentional. Built to boost discipline and output — one task
@@ -288,10 +288,10 @@
       <!-- Movie  -->
       <div class="border-1 border-gray-200 w-auto h-auto p-4 rounded-xl flex flex-col justify-center items-start gap-4">
         <div class="bg-gray-300 rounded-xl p-3 w-full md:-mt-14">
-          <img class="w-full h-[200px] md:h-[300px] lg:h-[250px] xl:h-[200px] rounded-lg  hover:shadow-2xl"
+          <img class="w-full rounded-lg  hover:shadow-2xl"
             :src="require('@/assets/images/ife5.png')" alt="a Movie picture">
         </div>
-        <h1 class="text-black text-4xl">🎬 Movie Explorer App</h1>
+        <h1 class="text-black text-4xl">Movie Explorer App</h1>
         <h1 class="text-gray-600 text-sm">A dynamic movie app that fetches data from an external API to display trending
           titles, ratings, posters, and more. Users can search for any film and instantly get clean, structured info —
           all in a smooth, responsive interface. Built for speed, style, and the love of cinema.</h1>
@@ -303,10 +303,10 @@
       <!-- Obito  -->
       <div class="border-1 border-gray-200 w-auto h-auto p-4 rounded-xl flex flex-col justify-center items-start gap-4">
         <div class="bg-gray-300 rounded-xl p-3 w-full">
-          <img class="w-full h-[200px] md:h-[300px] lg:h-[250px] xl:h-[200px] rounded-lg  hover:shadow-2xl"
+          <img class="w-full rounded-lg  hover:shadow-2xl"
             :src="require('@/assets/images/ife6.png')" alt="a Estatein picture">
         </div>
-        <h1 class="text-black text-4xl">🏘️ Estatein – Modern Real Estate Showcase</h1>
+        <h1 class="text-black text-4xl"> Estatein – Modern Real Estate Showcase</h1>
         <h1 class="text-gray-600 text-sm">Estatein is a sleek and user-friendly real estate platform built to display
           property listings with style and clarity. It features clean layouts, smooth navigation, and essential property
           info — making it easy for users to explore homes and make informed decisions. Designed with responsiveness and
@@ -319,8 +319,8 @@
     </div>
 
     <!-- work  -->
-    <div data-aos="fade-down" class="mt-32 flex flex-col justify-center items-center gap-10 p-4">
-      <h1 class="text-black text-4xl font-bold">💼 Work 🧑‍💻 Experience.</h1>
+    <div data-aos="fade-down" class="mt-14 md:mt-32 flex flex-col justify-center items-center gap-10 p-4">
+      <h1 class="text-black text-4xl font-bold">💼 Work Experience.</h1>
       <div class="flex flex-row items-center  justify-between gap-5">
         <h1 class="text-gray-500 text-xl">2025-Present </h1>
         <div class="flex flex-col md:flex-row lg:flex-col xl:flex-row gap-3">
@@ -335,7 +335,7 @@
     </div>
 
     <!-- reach  -->
-    <div data-aos="fade-down" class="mt-32 flex flex-col justify-center items-center px-2 md:px-32 lg:px-2 xl:px-32 py-0">
+    <div data-aos="fade-down" class="mt-14 md:mt-32 flex flex-col justify-center items-center px-2 md:px-32 lg:px-2 xl:px-32 py-0">
       <h1 class="text-black text-4xl font-bold">Reach Out to me.</h1>
       <h1 class="text-gray-500 text-xl">I’m all about building bold ideas, leveling up with smart people, and creating
         what’s next. Hit me up if you’re down to collab, see my portfolio deck, or spark a conversation.

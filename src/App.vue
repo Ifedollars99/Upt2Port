@@ -55,7 +55,7 @@
           that SLAPS. 🔥From clean code to bold UI. <br>
           — I am Confident that i can be of <span class="text-black font-bold"> "GREAT VALUE"</span> to your Prestigious
           Company or Team. <br>
-          — driven by vision 👁️, built with ambition 🚀, shaped through creativity 🎨🧠. </h1>
+          — driven by vision 👁️, built with ambition 🚀, shaped through creativity 🎨. </h1>
       </div>
       <!-- button  -->
       <div class="flex flex-row mt-10 gap-4">
@@ -73,10 +73,11 @@
     <!-- wrapper with overflow -->
     <div class="w-full mt-20 px-4 overflow-hidden">
       <!-- auto-scroll container -->
-      <div class="carousel-track flex gap-5 w-max animate-scroll">
-        <!-- Repeat your images here -->
+      <div class="carousel-track flex gap-5 w-max animate-scroll"
+        :class="{ 'animate-scroll': !isHovered, 'paused': isHovered }" @mouseenter="isHovered = true"
+        @mouseleave="isHovered = false">
         <div v-for="i in 2" :key="i" class="flex gap-5">
-          <!-- duplicate to make it seamless -->
+          <!-- duplicate seamless -->
           <div v-for="img in images" :key="img"
             class="bg-gray-100 rounded-lg p-4 transition-transform duration-300 ease-in-out hover:scale-110">
             <div class="bg-gray-500 rounded-lg p-3">
@@ -123,6 +124,7 @@ import NextPage from './components/NextPage.vue';
 
 const router = useRouter()
 const loading = ref(true)
+const isHovered = ref(false);
 const images = [
   require('@/assets/images/ife1.png'),
   require('@/assets/images/ife2.png'),
@@ -182,5 +184,13 @@ const scrollToTop = () => {
   background: linear-gradient(to right, rgba(255, 255, 255, 0.1), transparent);
   z-index: 10;
   pointer-events: none;
+}
+
+.animate-scroll {
+  animation: scroll 30s linear infinite;
+}
+
+.paused {
+  animation-play-state: paused !important;
 }
 </style>
