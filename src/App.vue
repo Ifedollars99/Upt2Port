@@ -48,14 +48,14 @@
       <div class="flex flex-col items-start  mt-32 gap-2" data-aos="fade-in" data-aos-duration="2000">
         <img class="rounded-full w-24 h-24"
           src="https://pbs.twimg.com/profile_images/1942172792595582976/KVeSxE3-_400x400.jpg" alt="Ifedollars 🐐">
-        <h1 class="text-black font-bold text-2xl md:text-4xl"> Greetings!! I’m Ifedollars,🐐 <br>
+        <h1 class="text-black font-bold text-2xl md:text-4xl"> Greetings!! I’m Taofeeq Ifedolapo <br>
           A Software Developer.🧑🏿‍💻 </h1>
         <h1 class="text-gray-500 text-sm md:text-xl font-normal text-left gap-2 mt-1">— a full-stack dev who builds
           sites
           that SLAPS. 🔥From clean code to bold UI. <br>
           — I am Confident that i can be of <span class="text-black font-bold"> "GREAT VALUE"</span> to your Prestigious
           Company or Team. <br>
-          — driven by vision 👁️, built with ambition 🚀, shaped through creativity 🎨. </h1>
+          — driven by vision 👁️, built with ambition 🚀, shaped through creativity🎨. </h1>
       </div>
       <!-- button  -->
       <div class="flex flex-row mt-10 gap-4">

@@ -3,19 +3,14 @@
     <div class="text-black text-4xl font-bold">More About myself here 👇</div>
     <p class="text-gray-700 text-lg mt-4 leading-relaxed">
       A highly disciplined and vision-driven software developer with a deep passion for solving complex problems
-      through clean, maintainable, and purposeful code. Programming isn’t just a skill — it’s a mindset. Every
-      line is written with intention, every feature is architected with scalability in mind, and every bug is
+      through clean, maintainable, and purposeful code. Programming isn’t just a skill, it’s a mindset. Every
+      line is written with intention and every bug is
       approached as an opportunity to sharpen precision and understanding.<br /><br />
 
       With a strong focus on problem-solving and system design, the approach to development is never shallow.
-      Rather than chasing shortcuts, there's a constant pursuit of understanding — diving deep into the logic
+      Rather than chasing shortcuts, there's a constant pursuit of understanding diving deep into the logic
       behind every implementation. It's not just about building software that works, but building systems that are
       robust, readable, and built to evolve.<br /><br />
-
-      Challenges aren’t avoided — they’re welcomed. Whether it’s debugging critical issues or crafting elegant
-      solutions from scratch, there's a natural drive to dissect, resolve, and improve. Every obstacle is treated
-      as a learning moment, and every success is earned through clarity, consistency, and relentless
-      execution.<br /><br />
     </p>
   </div>
 
@@ -27,7 +22,6 @@
       <!-- mine -->
       <img class="rounded-xl w-[400px] hover:scale-110"
         :src="require('@/assets/images/ife7.png')" alt="Myself13" />
-      <p class="text-black text-xl mt-3">Ifedollars🐐</p>
     </div>
   </div>
   <!-- tech stacks  -->
@@ -217,7 +211,7 @@
 
   <!-- projects  -->
   <div data-aos="fade-down" class="mt-32 flex flex-col justify-center items-center">
-    <div class="text-black text-4xl font-bold">💻 Projects I Have Been Working On......</div>
+    <div class="text-black text-4xl font-bold"> Projects I Have Been Working On......</div>
     <!-- grid pj  -->
     <div class=" p-3 md:p-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 gap-4 justify-items-center mt-10">
       <!-- dev cent  -->
