@@ -160,6 +160,11 @@ const scrollToTop = () => {
 </script>
 
 <style setup>
+html,body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
 @keyframes scroll {
   0% {
     transform: translateX(0);
