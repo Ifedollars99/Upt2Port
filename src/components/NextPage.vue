@@ -20,8 +20,7 @@
     <div data-aos="fade-left"
       class="bg-gray-200 p-4 rounded-lg transition-transform duration-300 ease-in-out hover:scale-110 shadow-md">
       <!-- mine -->
-      <img class="rounded-xl w-[400px] hover:scale-110"
-        :src="require('@/assets/images/ife7.png')" alt="Myself13" />
+      <img class="rounded-xl w-[400px] hover:scale-110" :src="require('@/assets/images/ife7.png')" alt="Myself13" />
     </div>
   </div>
   <!-- tech stacks  -->
@@ -213,12 +212,27 @@
   <div data-aos="fade-down" class="mt-32 flex flex-col justify-center items-center">
     <div class="text-black text-4xl font-bold"> Projects I Have Been Working On......</div>
     <!-- grid pj  -->
-    <div class=" p-3 md:p-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 gap-4 justify-items-center mt-10">
+    <div
+      class=" p-3 md:p-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 gap-4 justify-items-center mt-10">
+      <!-- Citibank CLone  -->
+      <div class="border-1 border-gray-200 w-auto h-auto p-4 rounded-xl flex flex-col justify-center items-start gap-4">
+        <div class="bg-gray-300 rounded-xl p-3 w-full">
+          <img class="w-full rounded-lg  hover:shadow-2xl" :src="require('@/assets/images/ife8.png')"
+            alt="a Citibank picture">
+        </div>
+        <h1 class="text-black text-4xl"> CitiBank Clone Project</h1>
+        <h1 class="text-gray-600 text-sm">This is a fully functional clone of the Citibank login and authentication
+          flow, designed to mimic the real-world user experience of an online banking system.</h1>
+        <a href="https://realciti-bank-nd48.vercel.app/" target="_blank" rel="noopener noreferrer"
+          class="bg-gray-100 hover:scale-110 text-xl text-black font-bold p-4 rounded-xl w-auto h-auto no-underline">View
+          Project ></a>
+      </div>
+      <!-- Citibank Clone end  -->
       <!-- dev cent  -->
       <div class="border-1 border-gray-200 w-auto h-auto p-4 rounded-xl flex flex-col justify-center items-start gap-4">
         <div class="bg-gray-300 rounded-xl p-3 w-full">
-          <img class="w-full rounded-lg  hover:shadow-2xl"
-            :src="require('@/assets/images/ife2.png')" alt="a Devcent picture">
+          <img class="w-full rounded-lg  hover:shadow-2xl" :src="require('@/assets/images/ife2.png')"
+            alt="a Devcent picture">
         </div>
         <h1 class="text-black text-4xl"> Devcent Project</h1>
         <h1 class="text-gray-600 text-sm">Devcent is a hands-on tech training platform focused on transforming beginners
@@ -233,8 +247,8 @@
       <!-- Estate  -->
       <div class="border-1 border-gray-200 w-auto h-auto p-4 rounded-xl flex flex-col justify-center items-start gap-4">
         <div class="bg-gray-300 rounded-xl p-3 w-full">
-          <img class="w-full rounded-lg  hover:shadow-2xl"
-            :src="require('@/assets/images/ife4.png')" alt="a Real picture">
+          <img class="w-full rounded-lg  hover:shadow-2xl" :src="require('@/assets/images/ife4.png')"
+            alt="a Real picture">
         </div>
         <h1 class="text-black text-4xl"> Real Estate Listing Platform</h1>
         <h1 class="text-gray-600 text-sm">This project is a clean and responsive real estate site built to showcase
@@ -248,8 +262,8 @@
       <!-- Weather  -->
       <div class="border-1 border-gray-200 w-auto h-auto p-4 rounded-xl flex flex-col justify-center items-start gap-4">
         <div class="bg-gray-300 rounded-xl p-3 w-full">
-          <img class="w-full rounded-lg  hover:shadow-2xl"
-            :src="require('@/assets/images/ife1.png')" alt="a Weather picture">
+          <img class="w-full rounded-lg  hover:shadow-2xl" :src="require('@/assets/images/ife1.png')"
+            alt="a Weather picture">
         </div>
         <h1 class="text-black text-4xl"> Weather Project</h1>
         <h1 class="text-gray-600 text-sm">This is a sleek, real-time weather app that fetches live weather data using an
@@ -266,8 +280,8 @@
       <!-- Prodmast  -->
       <div class="border-1 border-gray-200 w-auto h-auto p-4 rounded-xl flex flex-col justify-center items-start gap-4">
         <div class="bg-gray-300 rounded-xl p-3 w-full">
-          <img class="w-full  rounded-lg  hover:shadow-2xl"
-            :src="require('@/assets/images/ife3.png')" alt="a Prodmast picture">
+          <img class="w-full  rounded-lg  hover:shadow-2xl" :src="require('@/assets/images/ife3.png')"
+            alt="a Prodmast picture">
         </div>
         <h1 class="text-black text-4xl"> Prodmast – Productivity Tracker</h1>
         <h1 class="text-gray-600 text-sm">Prodmast is a smart productivity dashboard that helps users manage their
@@ -282,8 +296,8 @@
       <!-- Movie  -->
       <div class="border-1 border-gray-200 w-auto h-auto p-4 rounded-xl flex flex-col justify-center items-start gap-4">
         <div class="bg-gray-300 rounded-xl p-3 w-full md:-mt-14">
-          <img class="w-full rounded-lg  hover:shadow-2xl"
-            :src="require('@/assets/images/ife5.png')" alt="a Movie picture">
+          <img class="w-full rounded-lg  hover:shadow-2xl" :src="require('@/assets/images/ife5.png')"
+            alt="a Movie picture">
         </div>
         <h1 class="text-black text-4xl">Movie Explorer App</h1>
         <h1 class="text-gray-600 text-sm">A dynamic movie app that fetches data from an external API to display trending
@@ -297,8 +311,8 @@
       <!-- Obito  -->
       <div class="border-1 border-gray-200 w-auto h-auto p-4 rounded-xl flex flex-col justify-center items-start gap-4">
         <div class="bg-gray-300 rounded-xl p-3 w-full">
-          <img class="w-full rounded-lg  hover:shadow-2xl"
-            :src="require('@/assets/images/ife6.png')" alt="a Estatein picture">
+          <img class="w-full rounded-lg  hover:shadow-2xl" :src="require('@/assets/images/ife6.png')"
+            alt="a Estatein picture">
         </div>
         <h1 class="text-black text-4xl"> Estatein – Modern Real Estate Showcase</h1>
         <h1 class="text-gray-600 text-sm">Estatein is a sleek and user-friendly real estate platform built to display
@@ -329,7 +343,8 @@
     </div>
 
     <!-- reach  -->
-    <div data-aos="fade-down" class="mt-14 md:mt-32 flex flex-col justify-center items-center px-2 md:px-32 lg:px-2 xl:px-32 py-0">
+    <div data-aos="fade-down"
+      class="mt-14 md:mt-32 flex flex-col justify-center items-center px-2 md:px-32 lg:px-2 xl:px-32 py-0">
       <h1 class="text-black text-4xl font-bold">Reach Out to me.</h1>
       <h1 class="text-gray-500 text-xl">I’m all about building bold ideas, leveling up with smart people, and creating
         what’s next. Hit me up if you’re down to collab, see my portfolio deck, or spark a conversation.
@@ -340,24 +355,24 @@
     <form @submit.prevent="handleSubmit"
       class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 gap-3 mt-10 px-2 md:px-32 lg:px-2 xl:px-32 py-0 min-w-full">
       <!-- full name grid  -->
-      <input class="border-1 border-gray-400 rounded-xl w-full h-auto p-4 bg-gray-100" v-model="form.fullname" type="text" name="fullname"
-        placeholder="FullName" required />
+      <input class="border-1 border-gray-400 rounded-xl w-full h-auto p-4 bg-gray-100" v-model="form.fullname"
+        type="text" name="fullname" placeholder="FullName" required />
       <!-- full name grid  -->
-      <input class="border-1 border-gray-400 rounded-xl w-full h-auto p-4 bg-gray-100" v-model="form.email" type="email" name="email"
-        placeholder="Email" required />
+      <input class="border-1 border-gray-400 rounded-xl w-full h-auto p-4 bg-gray-100" v-model="form.email" type="email"
+        name="email" placeholder="Email" required />
       <!-- full name grid  -->
 
       <!-- Message -->
       <textarea
-        class="border-1 border-gray-400 col-span-1 md:col-span-2 lg:col-span-1 xl:col-span-2 rounded-xl w-full h-auto px-8 py-4 bg-gray-100" v-model="form.message"
-        name="message" rows="6" placeholder="Write Your Message" required></textarea>
+        class="border-1 border-gray-400 col-span-1 md:col-span-2 lg:col-span-1 xl:col-span-2 rounded-xl w-full h-auto px-8 py-4 bg-gray-100"
+        v-model="form.message" name="message" rows="6" placeholder="Write Your Message" required></textarea>
       <!-- send  button  -->
       <button
         class=" col-span-1 md:col-span-2 lg:col-span-1 xl:col-span-2 rounded-xl w-full h-auto p-2 flex items-center justify-center hover:scale-110"
         style="background-image: url('https://i.pinimg.com/736x/57/be/f7/57bef75efe25aafe84bb94748b5b3bf3.jpg');">
         <button class="text-white text-xl md:text-2xl font-bold">Send
           Message</button>
-        </button>
+      </button>
     </form>
 
 
