@@ -32,8 +32,8 @@
       style="background-image: url('https://i.pinimg.com/736x/57/be/f7/57bef75efe25aafe84bb94748b5b3bf3.jpg');">
       <!-- first  -->
       <div
-        class="bg-white/30 backdrop-blur-2xl w-48 h-20 p-2 rounded-xl flex flex-row items-center justify-center hover:scale-110">
-        <img class="w-14 h-14" src="https://tobi-portfolio-five.vercel.app/assets/logos/logo-1.png">
+        class="bg-white/30 backdrop-blur-2xl w-48 h-20 p-2 rounded-xl flex flex-row items-center justify-center hover:scale-110 gap-2">
+        <img class="w-14 h-14" src="https://i.pinimg.com/736x/ca/e1/b4/cae1b4f6b223fe5a7bb712b680cffa67.jpg">
         <h1
           class="text-xl text-transparent bg-clip-text bg-gradient-to-r from-white via-slate-300 to-white animate-pulse font-medium">
           HTML</h1>
@@ -55,8 +55,8 @@
       <!-- end  -->
       <!-- third  -->
       <div
-        class="bg-white/30 gap-1 backdrop-blur-2xl w-48 h-20 p-2 rounded-xl flex flex-row items-center justify-center hover:scale-110">
-        <img class="w-14 h-14" src="https://tobi-portfolio-five.vercel.app/assets/logos/logo-2.png">
+        class="bg-white/30 gap-2 backdrop-blur-2xl w-48 h-20 p-2 rounded-xl flex flex-row items-center justify-center hover:scale-110 ">
+        <img class="w-14 h-14" src="https://i.pinimg.com/1200x/28/b0/d1/28b0d189571e22609f0e9378da7b09a4.jpg">
         <h1
           class="text-xl text-transparent bg-clip-text bg-gradient-to-r from-white via-slate-300 to-white animate-pulse font-medium">
           JAVASCRIPT</h1>
@@ -64,8 +64,8 @@
       <!-- end  -->
       <!-- fourth  -->
       <div
-        class="bg-white/30 backdrop-blur-2xl w-48 h-20 p-2 rounded-xl flex flex-row items-center justify-center hover:scale-110 gap-1">
-        <img class="w-14 h-14" src="https://tobi-portfolio-five.vercel.app/assets/logos/logo-9.png">
+        class="bg-white/30 backdrop-blur-2xl w-48 h-20 p-2 rounded-xl flex flex-row items-center justify-center hover:scale-110 gap-2">
+        <img class="w-14 h-14" src="https://i.pinimg.com/736x/5e/42/c9/5e42c926feb229f934d3089d89c26e2f.jpg">
         <h1
           class="text-xl text-transparent bg-clip-text bg-gradient-to-r from-white via-slate-300 to-white animate-pulse font-medium">
           TAILWIND</h1>
@@ -103,8 +103,13 @@
       <!-- end  -->
       <!-- seventh  -->
       <div
-        class="bg-white/30 backdrop-blur-2xl w-48 h-20 p-2 rounded-xl flex flex-row items-center justify-center hover:scale-110 gap-1">
-        <img class="w-14 h-14" src="https://tobi-portfolio-five.vercel.app/assets/logos/logo-13.png">
+        class="bg-white/30 backdrop-blur-2xl w-48 h-20 p-2 rounded-xl flex flex-row items-center justify-center hover:scale-110 gap-2">
+        <svg class="w-14 h-14" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100"
+          viewBox="0 0 50 50">
+          <path
+            d="M17.791,46.836C18.502,46.53,19,45.823,19,45v-5.4c0-0.197,0.016-0.402,0.041-0.61C19.027,38.994,19.014,38.997,19,39 c0,0-3,0-3.6,0c-1.5,0-2.8-0.6-3.4-1.8c-0.7-1.3-1-3.5-2.8-4.7C8.9,32.3,9.1,32,9.7,32c0.6,0.1,1.9,0.9,2.7,2c0.9,1.1,1.8,2,3.4,2 c2.487,0,3.82-0.125,4.622-0.555C21.356,34.056,22.649,33,24,33v-0.025c-5.668-0.182-9.289-2.066-10.975-4.975 c-3.665,0.042-6.856,0.405-8.677,0.707c-0.058-0.327-0.108-0.656-0.151-0.987c1.797-0.296,4.843-0.647,8.345-0.714 c-0.112-0.276-0.209-0.559-0.291-0.849c-3.511-0.178-6.541-0.039-8.187,0.097c-0.02-0.332-0.047-0.663-0.051-0.999 c1.649-0.135,4.597-0.27,8.018-0.111c-0.079-0.5-0.13-1.011-0.13-1.543c0-1.7,0.6-3.5,1.7-5c-0.5-1.7-1.2-5.3,0.2-6.6 c2.7,0,4.6,1.3,5.5,2.1C21,13.4,22.9,13,25,13s4,0.4,5.6,1.1c0.9-0.8,2.8-2.1,5.5-2.1c1.5,1.4,0.7,5,0.2,6.6c1.1,1.5,1.7,3.2,1.6,5 c0,0.484-0.045,0.951-0.11,1.409c3.499-0.172,6.527-0.034,8.204,0.102c-0.002,0.337-0.033,0.666-0.051,0.999 c-1.671-0.138-4.775-0.28-8.359-0.089c-0.089,0.336-0.197,0.663-0.325,0.98c3.546,0.046,6.665,0.389,8.548,0.689 c-0.043,0.332-0.093,0.661-0.151,0.987c-1.912-0.306-5.171-0.664-8.879-0.682C35.112,30.873,31.557,32.75,26,32.969V33 c2.6,0,5,3.9,5,6.6V45c0,0.823,0.498,1.53,1.209,1.836C41.37,43.804,48,35.164,48,25C48,12.318,37.683,2,25,2S2,12.318,2,25 C2,35.164,8.63,43.804,17.791,46.836z">
+          </path>
+        </svg>
         <h1
           class="text-xl text-transparent bg-clip-text bg-gradient-to-r from-white via-slate-300 to-white animate-pulse font-medium">
           GIT</h1>
@@ -127,7 +132,7 @@
       <!-- nineth  -->
       <div
         class="bg-white/30 backdrop-blur-2xl w-48 h-20 p-2 rounded-xl flex flex-row items-center justify-center hover:scale-110 gap-1">
-        <img class="w-14 h-14" src="https://tobi-portfolio-five.vercel.app/assets/logos/logo-14.png">
+        <img class="w-14 h-14" src="https://i.pinimg.com/736x/9f/4c/25/9f4c2598ee3f12d78d35065639f8e243.jpg">
         <h1
           class="text-xl text-transparent bg-clip-text bg-gradient-to-r from-white via-slate-300 to-white animate-pulse font-medium">
           FIGMA</h1>
@@ -224,7 +229,7 @@
         <h1 class="text-gray-600 text-sm">This is a fully functional clone of the Citibank login and authentication
           flow, designed to mimic the real-world user experience of an online banking system.</h1>
         <a href="https://realciti-bank-nd48.vercel.app/" target="_blank" rel="noopener noreferrer"
-          class="bg-gray-100 hover:scale-110 text-xl text-black font-bold p-4 rounded-xl w-auto h-auto no-underline">View
+          class="bg-gray-100 hover:scale-110 text-sm text-black font-bold p-4 rounded-xl w-auto h-auto no-underline">View
           Project ></a>
       </div>
       <!-- Citibank Clone end  -->
@@ -255,7 +260,7 @@
           properties with modern UI and smooth user experience. It features elegant layouts, property cards, and dynamic
           interactions — perfect for buyers, renters, or agents looking for homes with style and function.</h1>
         <a href="https://pfx-pj.vercel.app/" target="_blank" rel="noopener noreferrer"
-          class="bg-gray-100 hover:scale-110 text-xl text-black font-bold p-4 rounded-xl w-auto h-auto no-underline">View
+          class="bg-gray-100 hover:scale-110 text-sm text-black font-bold p-4 rounded-xl w-auto h-auto no-underline">View
           Project ></a>
       </div>
       <!-- Estate end  -->
@@ -273,7 +278,7 @@
 
         </h1>
         <a href="https://weather-pj-shcm.vercel.app/" target="_blank" rel="noopener noreferrer"
-          class="bg-gray-100 hover:scale-110 text-xl text-black font-bold p-4 rounded-xl w-auto h-auto no-underline">View
+          class="bg-gray-100 hover:scale-110 text-sm text-black font-bold p-4 rounded-xl w-auto h-auto no-underline">View
           Project ></a>
       </div>
       <!-- Weather end  -->
@@ -289,7 +294,7 @@
           users a smooth experience to stay organized and intentional. Built to boost discipline and output — one task
           at a time.</h1>
         <a href="https://dribble-pj.vercel.app/" target="_blank" rel="noopener noreferrer"
-          class="bg-gray-100 hover:scale-110 text-xl text-black font-bold p-4 rounded-xl w-auto h-auto no-underline">View
+          class="bg-gray-100 hover:scale-110 text-sm text-black font-bold p-4 rounded-xl w-auto h-auto no-underline">View
           Project ></a>
       </div>
       <!-- Prodmast end  -->
@@ -304,7 +309,7 @@
           titles, ratings, posters, and more. Users can search for any film and instantly get clean, structured info —
           all in a smooth, responsive interface. Built for speed, style, and the love of cinema.</h1>
         <a href="https://movie-rose-xi.vercel.app/" target="_blank" rel="noopener noreferrer"
-          class="bg-gray-100 hover:scale-110 text-xl text-black font-bold p-4 rounded-xl w-auto h-auto no-underline">View
+          class="bg-gray-100 hover:scale-110 text-sm text-black font-bold p-4 rounded-xl w-auto h-auto no-underline">View
           Project ></a>
       </div>
       <!-- Movie end  -->
@@ -320,7 +325,7 @@
           info — making it easy for users to explore homes and make informed decisions. Designed with responsiveness and
           real-world usability in mind.</h1>
         <a href="https://obito-eight.vercel.app/" target="_blank" rel="noopener noreferrer"
-          class="bg-gray-100 hover:scale-110 text-xl text-black font-bold p-4 rounded-xl w-auto h-auto no-underline">View
+          class="bg-gray-100 hover:scale-110 text-sm text-black font-bold p-4 rounded-xl w-auto h-auto no-underline">View
           Project ></a>
       </div>
       <!-- Obito end  -->

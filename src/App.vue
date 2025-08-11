@@ -61,7 +61,7 @@
       <div class="flex flex-row mt-10 gap-4">
         <a href="https://wa.me/2348137628419?text=Hello 👋 i am ......... by name and i saw your portfolio!"
           target="_blank" rel="noopener noreferrer"
-          class="bg-black no-underline font-bold flex items-center justify-center rounded-lg px-4 py-1 text-white text-xl animate-bounce  hover:shadow-[0_0_15px_3px_rgba(255,255,255,0.4)] transition duration-300">Hire
+          class="bg-black no-underline font-bold flex items-center justify-center rounded-lg px-4 py-1 text-white text-sm animate-bounce  hover:shadow-[0_0_15px_3px_rgba(255,255,255,0.4)] transition duration-300">Hire
           Me!</a>
         <div class="bg-blue-200 rounded-3xl px-4 py-1 flex flex-row justify-center items-center animate-pulse">
           <i class="bi bi-dot text-blue-500 text-5xl font-bold"></i>
